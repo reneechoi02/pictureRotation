@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Picture Rotation</title>
+</head>
+<body>
+	<div>
+		<h1>Picture Rotation</h1>
+		<div>
+			<img src="./images/1.jpg" alt="this is a picture." width="400" height="500" id="image">
+		</div>
+	</div>
+</body>
+<script>
+	var i=1;
+	function rotationPicture(){
+		if(i<3){
+			console.log(i);
+			i++;
+			document.getElementById("image").src = "./images/"+ i +".jpg";
+		}else{
+			i=1;
+			document.getElementById("image").src = "./images/"+ i +".jpg";
+		}
+	}
+	window.onload = function(){
+		setInterval(rotationPicture, 1000);	
+	}
+</script>
+</html>
